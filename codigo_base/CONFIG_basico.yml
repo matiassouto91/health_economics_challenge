@@ -17,7 +17,7 @@
 # ============================================================================
 environment:
   # Directorio base del proyecto (donde están las carpetas codigo_base, dataset, exp)
-  base_dir: "C:/00_dev/00_playground/04_TEACH/UNO/2025/clases/health_economics_challenge"
+  base_dir: "C:/Users/Mat/Documents/GitHub/health_economics_challenge"
 
   # Directorio donde están los datos de entrada
   data_dir: "./dataset"
@@ -459,7 +459,7 @@ hyperparameter_tuning:
       # 100 iteraciones es un buen balance entre tiempo y calidad de resultados
       # Menos iteraciones = Más rápido pero peores resultados
       # Más iteraciones = Más lento pero mejores resultados
-      iterations: 100
+      iterations: 150
 
       # noisy: Si TRUE, asume que la evaluación tiene ruido (variabilidad)
       # TRUE = Recomendado (hay variabilidad en el proceso de entrenamiento)

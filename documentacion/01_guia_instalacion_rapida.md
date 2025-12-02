@@ -192,10 +192,10 @@ En RStudio, ejecutá este código línea por línea:
 library(data.table)
 
 # Configurar ruta (CAMBIAR POR TU RUTA)
-setwd("C:/Users/TuUsuario/Documents/health_economics_challenge")
+setwd("C:/Users/Mat/Documents/GitHub/health_economics_challenge")
 
 # Leer dataset
-dataset <- fread("dataset/dataset_desafio.csv")
+dataset <- fread("dataset/dataset_desafio_paises_todos.csv")
 
 # Verificar que se cargó correctamente
 cat("Dataset cargado:", nrow(dataset), "filas,", ncol(dataset), "columnas\n")
