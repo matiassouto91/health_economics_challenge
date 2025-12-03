@@ -116,8 +116,8 @@ Leyendo dataset...
 Dataset cargado: XXXX filas
 Ejecutando Feature Engineering...
 ✓ Feature Engineering completado
-
 ==============================================
+
 ETAPA 2: TRAINING STRATEGY
 ==============================================
 Particionando datos...
