@@ -441,7 +441,7 @@ hyperparameter_tuning:
 
       # num_threads: Número de threads para paralelización
       # 0 = Usa todos los cores disponibles
-      num_threads: 4
+      num_threads: 5
 
       # verbosity y verbose: Nivel de mensajes en consola
       # -100 = Silencioso (no muestra nada)
@@ -459,7 +459,7 @@ hyperparameter_tuning:
       # 100 iteraciones es un buen balance entre tiempo y calidad de resultados
       # Menos iteraciones = Más rápido pero peores resultados
       # Más iteraciones = Más lento pero mejores resultados
-      iterations: 200
+      iterations: 1000
 
       # noisy: Si TRUE, asume que la evaluación tiene ruido (variabilidad)
       # TRUE = Recomendado (hay variabilidad en el proceso de entrenamiento)

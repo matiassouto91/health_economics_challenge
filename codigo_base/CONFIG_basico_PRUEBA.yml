@@ -441,7 +441,7 @@ hyperparameter_tuning:
 
       # num_threads: Número de threads para paralelización
       # 0 = Usa todos los cores disponibles
-      num_threads: 0
+      num_threads: 5
 
       # verbosity y verbose: Nivel de mensajes en consola
       # -100 = Silencioso (no muestra nada)

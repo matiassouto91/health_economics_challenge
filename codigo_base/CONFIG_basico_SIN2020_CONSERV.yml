@@ -281,19 +281,19 @@ training_strategy:
   files:
     output:
       # present_data: Datos de 2021 sin clase (para predecir 2022)
-      present_data: "TS_present_data_SIN2020_CONSERV.csv.gz"
+      present_data: "TS_present_data.csv.gz"
 
       # train_strategy: Datos de train + validate + test (con particiones marcadas)
-      train_strategy: "TS_train_strategy_SIN2020_CONSERV.csv.gz"
+      train_strategy: "TS_train_strategy.csv.gz"
 
       # train_final: Datos para entrenar el modelo final (train + validate + test)
-      train_final: "TS_train_final_SIN2020_CONSERV.csv.gz"
+      train_final: "TS_train_final.csv.gz"
 
       # control: Archivo de texto con resumen de las particiones (revisar siempre!)
-      control: "control_SIN2020_CONSERV.txt"
+      control: "control.txt"
 
     # Script que ejecuta el particionamiento
-    ts_script: "02_TS_health_SIN2020_CONSERV.R"
+    ts_script: "02_TS_health.R"
 
 # ============================================================================
 # SECCIÓN 5: HYPERPARAMETER TUNING - Optimización de hiperparámetros

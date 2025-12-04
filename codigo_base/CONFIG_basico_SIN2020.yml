@@ -293,7 +293,7 @@ training_strategy:
       control: "control_sin2020.txt"
 
     # Script que ejecuta el particionamiento
-    ts_script: "02_TS_health_sin2020.R"
+    ts_script: "02_TS_health.R"
 
 # ============================================================================
 # SECCIÓN 5: HYPERPARAMETER TUNING - Optimización de hiperparámetros

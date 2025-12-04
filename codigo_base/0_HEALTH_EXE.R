@@ -11,7 +11,7 @@ carpeta_base <- "C:/Users/Mat/Documents/GitHub/health_economics_challenge"
 setwd(carpeta_base)
 objetos_trans_script <- c("experiment_dir","experiment_lead_dir","carpeta_base","objetos_trans_script")
 
-PARAMS <- yaml.load_file("./codigo_base/CONFIG_basico_PRUEBA.yml")
+PARAMS <- yaml.load_file("./codigo_base/CONFIG_basico_SIN2020_CONSERV.yml")
 
 # Carpetas de experimento
 experiment_dir <- paste(PARAMS$experiment$experiment_label,PARAMS$experiment$experiment_code,sep = "_")
