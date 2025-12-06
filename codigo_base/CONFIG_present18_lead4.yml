@@ -33,10 +33,10 @@ experiment:
   exp_dir: "./exp"
 
   # experiment_label: Etiqueta principal del experimento (relacionada con la variable objetivo)
-  experiment_label: "hf3_max"
+  experiment_label: "hf3_max_p18_l4"
 
   # experiment_code: Nombre descriptivo de este experimento en particular
-  experiment_code: "max_minimo"
+  experiment_code: "max_minimo_p18_l4"
 
   # NOTA: Los resultados se guardan en: exp/hf3_max_minimo/hf3_max_minimo_f1/
   #       donde "f1" indica que estamos prediciendo 1 año hacia adelante (lead=1)
@@ -66,10 +66,10 @@ feature_engineering:
 
     # orden_lead: Cuántos años hacia el futuro queremos predecir
     # 1 = Predecir el año siguiente (desde 2021 predecir 2022)
-    orden_lead: 1
+    orden_lead: 4
 
     # presente: Último año disponible en el dataset (año más reciente con datos)
-    presente: 2021
+    presente: 2018
 
     # canaritos_year_start: Año desde el cual comenzar el análisis
     # (años anteriores se descartan)

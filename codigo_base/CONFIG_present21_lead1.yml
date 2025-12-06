@@ -33,10 +33,10 @@ experiment:
   exp_dir: "./exp"
 
   # experiment_label: Etiqueta principal del experimento (relacionada con la variable objetivo)
-  experiment_label: "hf3_max"
+  experiment_label: "hf3_max_p21_l1"
 
   # experiment_code: Nombre descriptivo de este experimento en particular
-  experiment_code: "max_minimo"
+  experiment_code: "max_minimo_p21_l1"
 
   # NOTA: Los resultados se guardan en: exp/hf3_max_minimo/hf3_max_minimo_f1/
   #       donde "f1" indica que estamos prediciendo 1 año hacia adelante (lead=1)

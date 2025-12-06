@@ -17,7 +17,7 @@
 # ============================================================================
 environment:
   # Directorio base del proyecto (donde están las carpetas codigo_base, dataset, exp)
-  base_dir: "C:/Users/Mat/Documents/GitHub/health_economics_challenge"
+  base_dir: "C:/00_dev/00_playground/04_TEACH/UNO/2025/clases/health_economics_challenge"
 
   # Directorio donde están los datos de entrada
   data_dir: "./dataset"
@@ -33,10 +33,10 @@ experiment:
   exp_dir: "./exp"
 
   # experiment_label: Etiqueta principal del experimento (relacionada con la variable objetivo)
-  experiment_label: "hf3_max"
+  experiment_label: "hf3_max_p18_l4_convar"
 
   # experiment_code: Nombre descriptivo de este experimento en particular
-  experiment_code: "max_minimo"
+  experiment_code: "max_minimo_p18_l4_convar"
 
   # NOTA: Los resultados se guardan en: exp/hf3_max_minimo/hf3_max_minimo_f1/
   #       donde "f1" indica que estamos prediciendo 1 año hacia adelante (lead=1)
@@ -53,7 +53,7 @@ feature_engineering:
       dentrada: ["dataset_desafio.csv"]
 
     # Script de R que ejecuta el feature engineering
-    fe_script: "01_FE_health.R"
+    fe_script: "01_FE_health_convar.R"
 
   # --- Constantes (no modificar a menos que sepas lo que haces) ---
   const:
@@ -66,10 +66,10 @@ feature_engineering:
 
     # orden_lead: Cuántos años hacia el futuro queremos predecir
     # 1 = Predecir el año siguiente (desde 2021 predecir 2022)
-    orden_lead: 1
+    orden_lead: 4
 
     # presente: Último año disponible en el dataset (año más reciente con datos)
-    presente: 2021
+    presente: 2018
 
     # canaritos_year_start: Año desde el cual comenzar el análisis
     # (años anteriores se descartan)
@@ -250,7 +250,7 @@ training_strategy:
 
       # excluir: Lista de años específicos a excluir del training
       # Ejemplo: [2008, 2009] excluiría los años de la crisis financiera
-      excluir: [2020]
+      excluir: []
 
       # undersampling: Reducir la cantidad de ciertos registros para balancear clases
       # En regresión típicamente se deja vacío. Útil en clasificación desbalanceada
@@ -281,16 +281,16 @@ training_strategy:
   files:
     output:
       # present_data: Datos de 2021 sin clase (para predecir 2022)
-      present_data: "TS_present_data_sin2020.csv.gz"
+      present_data: "TS_present_data.csv.gz"
 
       # train_strategy: Datos de train + validate + test (con particiones marcadas)
-      train_strategy: "TS_train_strategy_sin2020.csv.gz"
+      train_strategy: "TS_train_strategy.csv.gz"
 
       # train_final: Datos para entrenar el modelo final (train + validate + test)
-      train_final: "TS_train_final_sin2020.csv.gz"
+      train_final: "TS_train_final.csv.gz"
 
       # control: Archivo de texto con resumen de las particiones (revisar siempre!)
-      control: "control_sin2020.txt"
+      control: "control.txt"
 
     # Script que ejecuta el particionamiento
     ts_script: "02_TS_health.R"
@@ -441,7 +441,7 @@ hyperparameter_tuning:
 
       # num_threads: Número de threads para paralelización
       # 0 = Usa todos los cores disponibles
-      num_threads: 4
+      num_threads: 0
 
       # verbosity y verbose: Nivel de mensajes en consola
       # -100 = Silencioso (no muestra nada)
@@ -459,7 +459,7 @@ hyperparameter_tuning:
       # 100 iteraciones es un buen balance entre tiempo y calidad de resultados
       # Menos iteraciones = Más rápido pero peores resultados
       # Más iteraciones = Más lento pero mejores resultados
-      iterations: 200
+      iterations: 100
 
       # noisy: Si TRUE, asume que la evaluación tiene ruido (variabilidad)
       # TRUE = Recomendado (hay variabilidad en el proceso de entrenamiento)
@@ -500,7 +500,7 @@ hyperparameter_tuning:
       importancia: "impo_"
 
     # Script que ejecuta la optimización de hiperparámetros
-    ht_script: "03_HT_health.R"
+    ht_script: "03_HT_health_v2.R"
 
   # --- Constantes ---
   const:
